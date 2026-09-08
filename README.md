@@ -1,8 +1,6 @@
 #  ChattingApp
 
-A real-time chat application built with **ASP.NET Core** and **SignalR**, supporting broadcast messaging to all connected users as well as group-based messaging. The project includes a backend (SignalR Hub) and a simple frontend (HTML/CSS/JS) for testing.
-
----
+A real-time chat application built with **ASP.NET Core** and **SignalR**, supporting broadcast messaging to all connected users as well as group-based messaging.
 
 ##  Features
 
