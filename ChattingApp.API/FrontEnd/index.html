@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chatting App</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Chatting Application</h1>
+
+        <div id="status" class="status disconnected">
+            Disconnected
+        </div>
+
+        <div class="section">
+
+            <input type="text"
+                   id="username"
+                   placeholder="Enter username">
+
+            <input type="text"
+                   id="message"
+                   placeholder="Enter message">
+
+            <button id="sendAll">
+                Send To Everyone
+            </button>
+
+        </div>
+
+        <hr>
+
+        <div class="section">
+
+            <input type="text"
+                   id="groupName"
+                   placeholder="Group name">
+
+            <button id="joinGroup">
+                Join Group
+            </button>
+
+            <button id="leaveGroup">
+                Leave Group
+            </button>
+
+            <button id="sendGroup">
+                Send To Group
+            </button>
+
+        </div>
+
+        <hr>
+
+        <div id="messages"></div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@microsoft/signalr@8.0.7/dist/browser/signalr.min.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

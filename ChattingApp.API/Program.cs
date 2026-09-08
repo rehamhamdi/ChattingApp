@@ -5,6 +5,19 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+builder.Services.AddSignalR();
+
+builder.Services.AddCors(opt =>
+{
+    opt.AddPolicy("AllowAll",
+        policy =>
+        {
+            policy.AllowAnyHeader()
+            .AllowAnyMethod()
+            .AllowCredentials()
+            .SetIsOriginAllowed(_ => true);
+        });
+});
 
 var app = builder.Build();
 
@@ -16,7 +29,11 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseCors("AllowAll");
+
 app.UseAuthorization();
+
+app.MapHub<ChattingApp.API.Hubs.ChatHub>("/chatHub");
 
 app.MapControllers();
 
