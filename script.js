@@ -1,4 +1,4 @@
-﻿
+
 const statusElement = document.getElementById("status");
 
 const usernameInput = document.getElementById("username");

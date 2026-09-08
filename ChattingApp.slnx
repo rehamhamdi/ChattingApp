@@ -1,3 +1,8 @@
 <Solution>
+  <Folder Name="/FrontEnd/">
+    <File Path="index.html" />
+    <File Path="script.js" />
+    <File Path="style.css" />
+  </Folder>
   <Project Path="ChattingApp.API/ChattingApp.API.csproj" />
 </Solution>
